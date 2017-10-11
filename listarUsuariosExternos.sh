@@ -9,7 +9,7 @@ else
 
   rutaHome=/home/$1/
   for i in *; do
-     if grep -q -v '@beeva.com' <<< "$i"; then
+     if grep -q -v '@beeva.com\|.sh' <<< "$i"; then
          echo -e '*********************************************************' >> $rutaHome$2
          echo $i >> $rutaHome$2
          cat $i >> $rutaHome$2
